@@ -34,18 +34,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: function(origin, callback) {
-//       return callback(null, true)
-//     }
+app.use(
+  cors({
+    credentials: true,
+    origin: function(origin, callback) {
+      return callback(null, true)
+    }
     
-//   })
-//   // cors()
-// );
+  })
+  // cors()
+);
 
-app.use(cors())
+// app.use(cors())
 
 app.use(
   session({
