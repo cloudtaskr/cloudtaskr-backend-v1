@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-let whitelist = ["http://localhost:3000", "https://cloudtaskr.netlify.app"];
+let whitelist = ["http://localhost:3000", "https://cloudtaskr.herokuapp.com"];
 let corsOptions = {
   credentials: true,
   origin: function (origin, callback) {
