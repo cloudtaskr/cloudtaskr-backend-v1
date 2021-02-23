@@ -51,30 +51,16 @@ let corsOptions = {
 };
 
 // test this cors configuration to see if login bug is fixed in deployment
+app.use(cors(corsOptions));
+
 // app.use(
-//   cors(corsOptions)
+//   cors({
+//     credentials: true,
+//     origin: function (origin, callback) {
+//       return callback(null, true);
+//     },
+//   })
 // );
-
-app.use(
-  cors({
-    credentials: true,
-    origin: function (origin, callback) {
-      return callback(null, true);
-    },
-  })
-);
-
-app.use(
-  cors({
-    credentials: true,
-    origin: function (origin, callback) {
-      return callback(null, true);
-    },
-  })
-  // cors()
-);
-
-// app.use(cors())
 
 app.use(
   session({
